@@ -1,5 +1,3 @@
-/* General Styles */
-
 * {
     margin: 0;
     padding: 0;
@@ -11,16 +9,58 @@ body {
     background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
     background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
     color: #000000; */
-    background-color:#2b3136;
+    background-color:note;
     font-family: 'Manjari', sans-serif;
 }
 
 /* HEADER */
-img {
-  width: 3.6em;
-  height: auto;
-  align: left;
-  margin-left: 20px;
+
+.footer{
+  background: #2b2c34;
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.header{
+  background: #2b2c34;
+  color: white;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+.container ul li a {
+  transition: all 0.4s linear;
+
+}
+
+.container1{
+max-height: 70px;
+}
+
+.container1 ul li a{
+  display: block;
+}
+
+.container ul li a:hover {
+  background: #335a82;
+}
+
+.navbar {
+  box-shadow: 2px 2px 5px #000;
+  opacity: 0.7;
+}
+
+.color {
+  background-color: #2b2c34;
+}
+
+.navbar .nav-item .nav-link {
+  color: #fff;
 }
 
 .titulo {
@@ -29,6 +69,14 @@ img {
   background:#4c59b4;
   padding: 20px 0;
   display: block;
+}
+
+.slide {
+  padding-left: 15%;
+  padding-right: 15%;
+  height: auto;
+  width: auto;
+
 }
 
 .title h1 {
@@ -41,9 +89,10 @@ img {
 
 /* CONTAINER */
 
-.container {
+.contenedor {
     width: 90%;
     max-width: 1000px;
+    padding-top: 1.9rem;
     margin: 1.6em auto;
     display: grid;
     gap: 1.6em;
@@ -55,23 +104,52 @@ img {
   grid-column: 1/-1;
 }
 
-.container>.slide{
+/*.header{
+background:#4c59b4;
+padding: 3px;
+padding-left: 10%;
+}*/
+
+.contenedor>.slide{
   grid-column: 1/-1;
 }
 
-.container>.header, .container>.content, .container>.sidebar, .container>.footer, .container>div {
-    background: #4c59b4;
-    padding: 20px;
-    border: 1px solid #000000;
+.contenedor>.bar{
+  grid-column: 1/-1;
+  background: #2b2c34;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.container>.header,.container>.footer {
+.navvv ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.navvv ul li {
+  display: inline-block;
+}
+
+.navvv ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.contenedor>.content, .contenedor>.sidebar, .contenedor>.footer, .contenedor>div {
+    /*background: #4c59b4;*/
+    padding: 20px;
+    /*border: 1px solid #000000;*/
+}
+
+.contenedor>.header,.contenedor>.footer {
     grid-column: 1/-1;
     background-color: #1e272e;
     color: #ffffff;
 }
 
-.container>.content {
+.contenedor>.content {
     grid-column: span 3;
     grid-row: span 4;
 }
@@ -88,7 +166,7 @@ img {
     padding: 10px;
 }
 
-.container>.sidebar {
+.contenedor>.sidebar {
     grid-column: span 2;
     grid-row: span 4;
     background: #485460;
@@ -98,13 +176,13 @@ img {
     justify-content: center;
 }
 
-.container .sidebar img {
+.contenedor .sidebar img {
     display: block;
     width: 100%;
     margin-top: 5px;
 }
 
-.container>.related-post {
+.contenedor>.related-post {
     background: #2d3436;
     color: #ffffff;
     height: 180px;
@@ -115,7 +193,7 @@ img {
     transition: all 0.5s ease;
 }
 
-.container>.related-post:hover {
+.contenedor>.related-post:hover {
     cursor: pointer;
     color: #000000;
     background: #ffffff;
@@ -127,14 +205,14 @@ img {
     .header {
         text-align: center;
     }
-    .container .content {
+    .contenedor .content {
         grid-column: 1 / -1;
     }
-    .container .sidebar {
+    .contenedor .sidebar {
         grid-column: 1 / 6;
     }
 
-    .container .related-post {
+    .contenedor .related-post {
         grid-column: 1/-1;
     }
 }
